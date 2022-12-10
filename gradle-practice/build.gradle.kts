@@ -99,12 +99,9 @@ tasks.register<InsukTask>("insukCustomTask") {
 }
 
 
-abstract class GreetingPluginExtension {
-    abstract val message : Property<String>
-
-    init {
-        message.convention("Hello from GreetingPlugin")
-    }
+interface GreetingPluginExtension {
+    val message : Property<String>
+    val greeter: Property<String>
 }
 
 class GreetingPlugin : Plugin<Project> {
@@ -114,7 +111,7 @@ class GreetingPlugin : Plugin<Project> {
         // Add a task that uses configuration from the extension object
         project.task("greeting") {
             doLast {
-                println(extension.message.get())
+                println("${extension.message.get()} from ${extension.greeter.get()}")
             }
         }
     }
@@ -123,4 +120,7 @@ class GreetingPlugin : Plugin<Project> {
 apply<GreetingPlugin>()
 
 // Configuration the extension
-the<GreetingPluginExtension>().message.set("Hi from Gradle")
+configure<GreetingPluginExtension> {
+    message.set("Hi")
+    greeter.set("Gradle")
+}
