@@ -3,6 +3,9 @@ import com.custom.InsukTask
 
 // https://plugins.gradle.org/
 plugins {
+    // module : greeting-gradle-plugin
+    id("org.example.greeting") version "1.0-SNAPSHOT" // 플러그인 적용
+
     id("org.springframework.boot") version "3.0.0"
     id("io.spring.dependency-management") version "1.1.0"
 
