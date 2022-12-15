@@ -46,3 +46,9 @@ Hot Observable에는 주의할 점이 있다. 배압(back pressure)를 고려해
 
 **Cold Observable을 뜨거운 Observable 객체로 변환하는 방법은 Subject 객체를 만들거나 ConnectableObservable 클래스를 활용하는 것이다.**
 
+## Reactive Streams
+[Reactive Streams](http://www.reactive-streams.org/)
+
+[Reactive Streams Specification for the Jvm](https://github.com/reactive-streams/reactive-streams-jvm)
+
+
