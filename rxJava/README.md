@@ -26,7 +26,7 @@ RxJava 라이브러리는 리액티브 프로그래밍 개념의 자바 구현�
 네트워크 프로그래밍할때 사용하는 콜백(callback)이나 UI 프로그래밍할때 버튼 이벤트를 처리하는 클릭 리스너도 개념상으로는 리액티브 프로그래밍에 해당한다. 이 전통적인 개념에 몇가지 요소를 추가해야 RxJava 기반의 리액티브 프로그래밍이라고 할 수 있다.
 
 ## Observable 클래스
-![스크린샷 2022-12-12 22.35.14.png](..%2F..%2F..%2FDesktop%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202022-12-12%2022.35.14.png)
+<img width="675" alt="스크린샷 2022-12-12 22 35 14" src="https://user-images.githubusercontent.com/14847562/207060926-ab218d41-2ee0-4013-b4e1-ce8cb0d48041.png">
 
 ## Hot Observable
 Observable에는 Hot Observable과 Cold Observable이 있다. 
