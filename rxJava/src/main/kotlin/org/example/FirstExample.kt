@@ -5,10 +5,10 @@ import java.util.concurrent.Callable
 import java.util.concurrent.Executors
 
 fun main(args: Array<String>) {
-//    FirstExample().emit()
-//    FirstExample().disposableFunc()
-//    FirstExample().createFunc()
-//    FirstExample().callableFunc()
+    FirstExample().emit()
+    FirstExample().disposableFunc()
+    FirstExample().createFunc()
+    FirstExample().callableFunc()
     FirstExample().futureFunc()
 }
 
