@@ -51,4 +51,33 @@ Hot Observable에는 주의할 점이 있다. 배압(back pressure)를 고려해
 
 [Reactive Streams Specification for the Jvm](https://github.com/reactive-streams/reactive-streams-jvm)
 
+## RxJava 기본구조
+
+| 구분                   | 생산자        | 소비자        |
+|----------------------|------------|------------|
+| Reactive Stream 지원   | Flowable   | Subscriber |
+| Reactive Stream 미지원  | Observable | Observer   |
+
+Flowable 은 Reactive Streams 의 생산자인 Publisher 를 구현한 클래스고, Subscriber 는 Reactive Streams 의 클래스이다.<br>
+그래서 기본적인 매커니즘은 Reactive Streams 와 같다. 생산자인 Flowable 로 구독 시작(onSubscribe), 데이터 통지(onNext), 에러 통지(onError), 완료 통지(onComplete) 를 하고 각 통지를 받은 시점에 소비자인 Subscriber 로 처리합니다.<br>
+그리고 Subscription 으로 데이터 개수 요청과 구독 해지를 합니다.
+
+이베 비해 RxJava 2.x 버전의 observable 과 Observer 구성은 Reactive Streams 를 구현하지 않아서 Reactive Streams 인터페이스를 사용하지 않습니다. <br>
+하지만 기본적인 메커니즘은 Flowable 과 Subscriber 구성과 거의 같습니다. <br>
+생산자인 Observable 에서 구독 시작(onSubscribe), 데이터 통지(onNext), 에러 통지(onError), 완료 통지(onComplete) 를 하면 Observer 에서 이 통지를 받습니다. <br>
+다만, Observable 과 Observer 구성은 통지하는 데이터 개수를 제어하는 배압 기능이 없기 때문에 데이터 개수를 요청하지 않습니다. <br>
+그래서 Subscription 을 사용하지 않고, Disposable 이라는 구독 해지 메서드가 있는 인터페이스를 사용합니다. <br>
+이 Disposable 은 구독을 시작하는 시점에 onSubscribe 메서드의 인자로 Observer 에 전달됩니다. Disposable 에는 구독 해지를 위한 다음 2개의 메서드가 있습니다. 
+
+| 메서드        | 설명                                    |
+|------------|---------------------------------------|
+| dispose    | 구독을 해지한다.                             |
+| isDisposed | 구독을 해지하면 true, 해지하지 않으면 false 를 반환한다. |
+
+그래서 Observable 과 Observer 간에 데이터를 교환할 때 Flowable 과 Subscriber 처럼 데이터 개수 요청은 하지 않고 데이터가 생성되자마자 Observer 에 통지됩니다.
+
+## Cold 생산자와 Hot 생산자
+<img src="https://user-images.githubusercontent.com/14847562/208289034-236bccfe-eaba-40f2-bcf8-6103731ce40c.jpeg" width="700" height="700" alt="coldAndHot"/>
+
+
 
