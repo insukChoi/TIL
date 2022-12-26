@@ -10,7 +10,7 @@ import org.reactivestreams.Subscription
 fun main(args: Array<String>) {
     val flowable: Flowable<String> = Flowable.create(
         FlowableOnSubscribe { emitter ->
-            val datas = arrayOf("Hello, World!", "안녕, RxJava!")
+            val datas = arrayOf("Hello, World!", "안녕, RxJava!", "안녕, RxJava1", "안녕, RxJava2", "안녕, RxJava3")
             for (data in datas) {
                 // 구독이 해지되면 처리를 중단한다.
                 if (emitter.isCancelled) return@FlowableOnSubscribe

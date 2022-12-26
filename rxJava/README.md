@@ -79,5 +79,14 @@ Flowable 은 Reactive Streams 의 생산자인 Publisher 를 구현한 클래스
 ## Cold 생산자와 Hot 생산자
 <img src="https://user-images.githubusercontent.com/14847562/208289034-236bccfe-eaba-40f2-bcf8-6103731ce40c.jpeg" width="700" height="700" alt="coldAndHot"/>
 
+## Flowable vs Observable
+* Flowable 사용
+  * 대량 데이터(10,000건 이상)를 처리할 때
+  * 네트워크 통신이나 데이터베이스 등의 I/O 처리를 할 때
+* Observable
+    * GUI 이벤트
+    * 소량 데이터(1,000건 이하)를 처리할 때
+    * 데이터 처리가 기본으로 동기 방식이며, 자바 표준의 Stream 대신 사용할 때
+
 
 
