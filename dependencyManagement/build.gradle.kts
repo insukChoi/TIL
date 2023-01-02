@@ -16,6 +16,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple")
 
     implementation("org.springframework.integration:spring-integration-core")
+    implementation("com.google.guava:guava")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
@@ -24,6 +25,8 @@ dependencies {
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
+
+//ext["spring.version"] = "4.0.4.RELEASE"
 
 dependencyManagement {
     dependencies {
@@ -49,7 +52,18 @@ dependencyManagement {
         // Importing a Maven Bom
         // show ./gradlew dependencies --configuration compileClasspath
         imports {
-            mavenBom("io.spring.platform:platform-bom:1.0.1.RELEASE")
+            mavenBom("io.spring.platform:platform-bom:1.0.1.RELEASE") {
+                // Overriding Versions in a Bom
+//                bomProperty("spring.version", "4.0.4.RELEASE")
+//                bomProperties(mapOf(
+//                    "spring.version" to "4.0.4.RELEASE"
+//                ))
+            }
+            dependencies {
+                dependency("com.google.guava:guava:18.0")
+            }
         }
+
+        overriddenByDependencies(false)
     }
 }
