@@ -1,3 +1,5 @@
+import groovy.util.Node
+
 plugins {
     kotlin("jvm") version "1.7.21"
     id("io.spring.dependency-management") version "1.1.0"
@@ -65,5 +67,23 @@ dependencyManagement {
         }
 
         overriddenByDependencies(false)
+
+        // Accessing propeties from Imported Boms
+        println(dependencyManagement.importedProperties["spring.version"])
+
+        // Programmatic access
+        val managedVersions = dependencyManagement.managedVersions
+        println(managedVersions)
+        println(dependencyManagement.getManagedVersionsForConfiguration(configurations.getByName("implementation")))
+
+        val springCoreVersion = managedVersions["org.springframework:spring-core"]
+        println(springCoreVersion)
+    }
+
+    resolutionStrategy {
+        // 플러그인은 내부 종속성 해결을 위해 별도의 분리된 구성을 사용합니다.
+        // 클로저를 사용하여 이러한 구성에 대한 해결 전략을 구성할 수 있습니다.
+        // 스냅샷을 사용하는 경우 변경 모듈을 0초 동안 캐시하도록 Gradle을 구성하여 가져온 bom의 캐싱을 비활성화할 수 있습니다.
+        cacheChangingModulesFor(0, TimeUnit.SECONDS)
     }
 }
