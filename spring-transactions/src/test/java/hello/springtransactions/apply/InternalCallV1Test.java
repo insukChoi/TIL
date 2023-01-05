@@ -41,7 +41,6 @@ public class InternalCallV1Test {
 
     @Slf4j
     static class CallService {
-
         public void external() {
             log.info("call external");
             printTxInfo();
