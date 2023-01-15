@@ -72,7 +72,23 @@ public class BasicTxTest {
 
         log.info("트랜젝션2 시작");
         final TransactionStatus tx2 = txManager.getTransaction(new DefaultTransactionAttribute());
-        log.info("트랜젝션2 커밋");
+        log.info("트랜젝션2 롤백");
         txManager.rollback(tx2);
+    }
+
+    @Test
+    void inner_commit() {
+        log.info("외부 트랜젝션 시작");
+        final TransactionStatus outer = txManager.getTransaction(new DefaultTransactionAttribute());
+        log.info("outer.isNewTransaction()={}", outer.isNewTransaction());
+
+        log.info("내부 트랜젝션 시작");
+        final TransactionStatus inner = txManager.getTransaction(new DefaultTransactionAttribute());
+        log.info("inner.isNewTransaction()={}", inner.isNewTransaction());
+        log.info("내부 트랜젝션 커밋");
+        txManager.commit(inner);
+
+        log.info("외부 트랜젝션 커밋");
+        txManager.commit(outer);
     }
 }
