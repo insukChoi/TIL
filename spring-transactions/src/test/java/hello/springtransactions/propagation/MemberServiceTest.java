@@ -11,10 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Slf4j
 @SpringBootTest
 class MemberServiceTest {
-
-    @Autowired MemberService memberService;
-    @Autowired MemberRepository memberRepository;
-    @Autowired LogRepository logRepository;
+    @Autowired
+    MemberService memberService;
+    @Autowired
+    MemberRepository memberRepository;
+    @Autowired
+    LogRepository logRepository;
 
     /**
      * memberService : @Transactional:OFF
@@ -46,7 +48,7 @@ class MemberServiceTest {
 
         // when
         assertThatThrownBy(() -> memberService.joinV1(username))
-                        .isInstanceOf(RuntimeException.class);
+                .isInstanceOf(RuntimeException.class);
 
         // then : 모든 데이터가 정상 저장된다.
         assertTrue(memberRepository.find(username).isPresent());
