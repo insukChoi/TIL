@@ -1,5 +1,3 @@
-import groovy.util.Node
-
 plugins {
     kotlin("jvm") version "1.7.21"
     id("io.spring.dependency-management") version "1.1.0"
