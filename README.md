@@ -5,3 +5,4 @@
 * [Dependency Management Plugin](https://github.com/insukChoi/TIL/tree/main/dependencyManagement)
 * [RxJava](https://github.com/insukChoi/TIL/blob/main/rxJava/README.md)
 * [SpringTransaction](https://github.com/insukChoi/TIL/tree/main/spring-transactions)
+* [JUnit5 Reference Practice](https://github.com/insukChoi/TIL/blob/main/junit5-reference-practice/README.md)
