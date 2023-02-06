@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 
 class CalculatorTest {
+    @Fast
     @Test
     fun `1 + 1 = 2`() {
         val calculator = Calculator()

@@ -14,7 +14,18 @@ dependencies {
 }
 
 tasks.test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        excludeTags("fast")
+    }
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+}
+
+val fastTest by tasks.registering(Test::class) {
+    useJUnitPlatform {
+        includeTags("fast")
+    }
     testLogging {
         events("passed", "skipped", "failed")
     }
