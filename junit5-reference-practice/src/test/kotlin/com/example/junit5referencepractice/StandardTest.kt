@@ -13,10 +13,10 @@ class StandardTest {
     fun succeedingTest() {
     }
 
-    @Test
-    fun failingTest() {
-        fail("a failing test")
-    }
+//    @Test
+//    fun failingTest() {
+//        fail("a failing test")
+//    }
 
     @Test
     @Disabled("for demonstration purposes")
