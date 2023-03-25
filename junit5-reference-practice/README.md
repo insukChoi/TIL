@@ -50,3 +50,50 @@ JUnit Jupiter supports the following annotations for configuring tests and exten
 | @ExtendWith            | 	확장을 선언적으로 등록할 때 사용함.                                                              |
 | @RegisterExtension     | 	필드를 통해 프로그래밍 방식으로 확장을 등록할 때 사용함.                                                  |
 | @TempDir               | 	필드 주입 또는 매개변수 주입을 통해 임시 디렉토리를 제공하는데 사용함.                                          |
+
+
+## Junit Platform
+Group ID: org.junit.platform
+
+Version: 1.9.2
+
+Artifact IDs:
+
+### junit-platform-commons
+Common APIs and support utilities for the JUnit Platform. Any API annotated with @API(status = INTERNAL) is intended solely for usage within the JUnit framework itself. Any usage of internal APIs by external parties is not supported!
+
+### junit-platform-console
+Support for discovering and executing tests on the JUnit Platform from the console. See Console Launcher for details.
+
+### junit-platform-console-standalone
+An executable JAR with all dependencies included is provided in Maven Central under the junit-platform-console-standalone directory. See Console Launcher for details.
+
+### junit-platform-engine
+Public API for test engines. See Registering a TestEngine for details.
+
+### junit-platform-jfr
+Provides a LauncherDiscoveryListener and TestExecutionListener for Java Flight Recorder events on the JUnit Platform. See Flight Recorder Support for details.
+
+### junit-platform-launcher
+Public API for configuring and launching test plans — typically used by IDEs and build tools. See JUnit Platform Launcher API for details.
+
+### junit-platform-reporting
+TestExecutionListener implementations that generate test reports — typically used by IDEs and build tools. See JUnit Platform Reporting for details.
+
+### junit-platform-runner
+Runner for executing tests and test suites on the JUnit Platform in a JUnit 4 environment. See Using JUnit 4 to run the JUnit Platform for details.
+
+### junit-platform-suite
+JUnit Platform Suite artifact that transitively pulls in dependencies on junit-platform-suite-api and junit-platform-suite-engine for simplified dependency management in build tools such as Gradle and Maven.
+
+### junit-platform-suite-api
+Annotations for configuring test suites on the JUnit Platform. Supported by the JUnit Platform Suite Engine and the JUnitPlatform runner.
+
+### junit-platform-suite-commons
+Common support utilities for executing test suites on the JUnit Platform.
+
+### junit-platform-suite-engine
+Engine that executes test suites on the JUnit Platform; only required at runtime. See JUnit Platform Suite Engine for details.
+
+### junit-platform-testkit
+Provides support for executing a test plan for a given TestEngine and then accessing the results via a fluent API to verify the expected results.
