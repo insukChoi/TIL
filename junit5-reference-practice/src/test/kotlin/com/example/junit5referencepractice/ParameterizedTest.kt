@@ -3,22 +3,17 @@ package com.example.junit5referencepractice
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.EnumSource
-import org.junit.jupiter.params.provider.MethodSource
-import org.junit.jupiter.params.provider.NullAndEmptySource
-import org.junit.jupiter.params.provider.ValueSource
+import org.junit.jupiter.params.provider.*
 import java.time.temporal.ChronoUnit
 import java.time.temporal.TemporalUnit
-import java.util.Arrays
-import java.util.EnumSet
+import java.util.*
 import java.util.stream.IntStream
 import java.util.stream.Stream
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ParameterizedTest {
     @ParameterizedTest
-    @ValueSource(ints = [1,2,3])
+    @ValueSource(ints = [1, 2, 3])
     fun testWithValueSource(argument: Int) {
         assertTrue(argument in 1..3)
     }
@@ -97,5 +92,18 @@ class ParameterizedTest {
             Arguments.arguments("apple", 1, listOf("a", "b")),
             Arguments.arguments("lemon", 2, listOf("x", "y"))
         )
+    }
+
+    @ParameterizedTest
+    @CsvSource(
+        quoteCharacter = '"', textBlock = """
+          apple,         1
+          banana,        2
+          "lemon, lime", 0xF1
+          strawberry,    700_000"""
+    )
+    fun test(fruit: String?, rank: Int) {
+        assertNotNull(fruit)
+        assertNotEquals(0, rank)
     }
 }
