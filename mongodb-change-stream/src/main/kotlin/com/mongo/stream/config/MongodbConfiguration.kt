@@ -7,11 +7,15 @@ import com.mongodb.reactivestreams.client.MongoClients
 import org.springframework.boot.autoconfigure.mongo.MongoProperties
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.*
+import org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
+import org.springframework.data.mongodb.MongoManagedTypes
 import org.springframework.data.mongodb.ReactiveMongoDatabaseFactory
 import org.springframework.data.mongodb.ReactiveMongoTransactionManager
 import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration
 import org.springframework.data.mongodb.config.EnableMongoAuditing
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.convert.MongoCustomConversions
+import org.springframework.data.mongodb.core.mapping.MongoMappingContext
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories
 
 
@@ -44,8 +48,17 @@ class MongodbConfiguration(
     }
 
     @Bean
-    fun reactiveMongoTemplate(): ReactiveMongoTemplate? {
+    fun reactiveMongoTemplate(): ReactiveMongoTemplate {
         return ReactiveMongoTemplate(mongoClient(), databaseName)
+    }
+
+    override fun mongoMappingContext(
+        customConversions: MongoCustomConversions,
+        mongoManagedTypes: MongoManagedTypes
+    ): MongoMappingContext {
+        return super.mongoMappingContext(customConversions, mongoManagedTypes).apply {
+            setFieldNamingStrategy(SnakeCaseFieldNamingStrategy())
+        }
     }
 
     override fun getDatabaseName(): String =
