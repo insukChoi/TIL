@@ -8,3 +8,4 @@
 * [JUnit5 Reference Practice](https://github.com/insukChoi/TIL/blob/main/junit5-reference-practice/README.md)
 * [SpringBoot AutoConfiguration](https://github.com/insukChoi/TIL/blob/main/springboot-autoconfiguration/README.md)
 * [MongoDB Change Stream](https://github.com/insukChoi/TIL/blob/main/mongodb-change-stream/README.md)
+* [Kotest Practice](https://github.com/insukChoi/TIL/blob/main/kotest-practice/README.md)
