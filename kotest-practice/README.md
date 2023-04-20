@@ -11,3 +11,19 @@
 >>[Test Framework](https://kotest.io/docs/framework/framework.html) <br>
 [Assertions Library](https://kotest.io/docs/assertions/assertions.html) <br>
 [Property Testing](https://kotest.io/docs/proptest/property-based-testing.html)
+
+### Testing Styles
+Kotest offers 10 different styles of test layout.
+
+| Test Style       | Inspired By                    |
+|------------------|--------------------------------|
+| Fun Spec         | ScalaTest                      |
+| Describe Spec    | JavaScript framework and RSpec |
+| Should Spec      | A Kotest Original              |
+| String Spec      | A Kotest Original              |
+| Behavior Spec    | BDD frameworks                 |
+| Free Spec        | ScalaTest                      |
+| Word Spec        | ScalaTest                      |
+| Feature Spec     | Cucumber                       |
+| Expect Spec      | A Kotest Original              |
+| Annotataion Spec | JUnit                          |
