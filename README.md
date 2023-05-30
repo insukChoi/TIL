@@ -9,3 +9,4 @@
 * [SpringBoot AutoConfiguration](https://github.com/insukChoi/TIL/blob/main/springboot-autoconfiguration/README.md)
 * [MongoDB Change Stream](https://github.com/insukChoi/TIL/blob/main/mongodb-change-stream/README.md)
 * [Kotest Practice](https://github.com/insukChoi/TIL/blob/main/kotest-practice/README.md)
+* [구글 엔지니어는 이렇게 일한다](https://github.com/insukChoi/TIL/blob/main/how-to-work-google-engineer/README.md)
