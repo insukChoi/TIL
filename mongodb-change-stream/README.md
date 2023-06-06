@@ -7,8 +7,6 @@ Change Streams can be consumed with both, the imperative and the reactive MongoD
 
 It is possible to watch both on a collection as well as database level, whereas the database level variant publishes changes from all collections within the database. When subscribing to a database change stream, make sure to use a suitable type for the event type as conversion might not apply correctly across different entity types. In doubt, use Document.
 
-
-# mongodb-community 
-start : brew services start mongodb-community
-stop : brew services stop mongodb-community
-log : /opt/homebrew/var/log/mongodb/mongo.log
+# Run Mongodb ReplicaSet
+$ npm install run-rs -g
+$ run-rs 5.0.6 --dbpath '/opt/homebrew/var/mongodb'
