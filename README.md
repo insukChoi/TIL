@@ -1,5 +1,6 @@
 # TIL(Today I Learned)
 
+* [Atomic Kotlin](https://github.com/insukChoi/TIL/blob/main/atomic-kotlin/README.md)
 * [Gradle Reference Practice](https://github.com/insukChoi/TIL/blob/main/gradle-practice/README.md)
 * [Gradle Custom Plugin Practice](https://github.com/insukChoi/TIL/tree/main/greeting-gradle-plugin)
 * [Dependency Management Plugin](https://github.com/insukChoi/TIL/tree/main/dependencyManagement)
