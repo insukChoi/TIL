@@ -1,7 +1,6 @@
 package com.example.atomickotlin.lazyInitialization
 
 import com.example.atomickotlin.atomicTest.trace
-import kotlin.math.tan
 
 class WithLate {
     lateinit var x: String
