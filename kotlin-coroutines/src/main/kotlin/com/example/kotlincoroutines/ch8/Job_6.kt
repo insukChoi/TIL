@@ -10,25 +10,28 @@ fun main() {
     println("END")
 }
 
-object DBUpsertException: CancellationException("DB upsert Exception")
-object KafkaSendingException: CancellationException("Kafka Sending Exception")
+object DBUpsertException : CancellationException("DB upsert Exception")
+object KafkaSendingException : CancellationException("Kafka Sending Exception")
 
 class MessageProcessor {
     fun processMessage(message: String) = runBlocking {
-        launch {
-//            delay(3000)
-            println("DB = $message")
-            if (DBService().upsert() != 1) throw DBUpsertException
-        }
+        withContext(Dispatchers.IO) {
+            launch {
+                delay(500)
+                println("DB = $message")
+                throw DBUpsertException // supervisor job 대신 부모까지 예외가 전파되지 않는 CancellationException 사용
+            }
 
-        launch {
-            runCatching {
-                delay(1000)
-                println("Kafka = $message")
-            }.onFailure {
-                println("kafka failed")
+            launch {
+                runCatching {
+                    delay(1000)
+                    println("Kafka = $message")
+                }.onFailure {
+                    println("kafka failed")
+                }
             }
         }
+        println("runBlocking END")
     }
 }
 
