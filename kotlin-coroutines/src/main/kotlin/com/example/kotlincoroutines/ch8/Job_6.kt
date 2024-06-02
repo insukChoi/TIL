@@ -31,7 +31,6 @@ class MessageProcessor {
                 }
             }
         }
-        println("runBlocking END")
     }
 }
 
