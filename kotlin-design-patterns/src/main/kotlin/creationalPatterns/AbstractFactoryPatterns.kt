@@ -1,5 +1,9 @@
 package creationalPatterns
 
+/**
+ * 추상 팩토리란 팩토리를 만들어 내는 팩토리.
+ * 즉, 추상 팩토리란 여러 팩토리 메서드를 감싸는 클래스다.
+ */
 interface Property {
     val name: String
     val value: Any
