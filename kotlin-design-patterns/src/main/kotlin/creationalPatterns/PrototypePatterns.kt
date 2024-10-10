@@ -1,5 +1,7 @@
 package creationalPatterns
 
+import kotlin.collections.Set
+
 data class User(
     val name: String,
     val role: Role,
