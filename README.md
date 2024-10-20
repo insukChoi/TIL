@@ -14,3 +14,4 @@
 * [Coroutines-Practice](https://github.com/insukChoi/TIL/blob/main/coroutines-practice/README.md)
 * [Kotlin-Coroutines](https://github.com/insukChoi/TIL/blob/main/kotlin-coroutines/README.md)
 * [Kotlin-functional-programming](https://github.com/insukChoi/TIL/blob/main/kotlin-functional-programming/README.md)
+* [Kotlin-design-patterns](https://github.com/insukChoi/TIL/blob/main/kotlin-design-patterns/README.md)
