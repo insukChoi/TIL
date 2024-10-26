@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 상태 패턴은 전략 패턴의 일종이라고 생각할 수 있다.

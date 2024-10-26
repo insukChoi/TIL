@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 책임 사슬 패턴은 복잡한 로직을 여러 개의 작은 단계로 쪼갠다.

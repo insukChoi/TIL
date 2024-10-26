@@ -1,4 +1,4 @@
-package functionalProgramming
+package `4_functionalProgramming`
 
 /**
  * 객체지향 패러다임에서는 상태를 항상 객체에 저장한다. 그러나 함수형 프로그래밍에서는 꼭 그렇지 않다.

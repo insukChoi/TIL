@@ -1,4 +1,4 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
 interface StarTrekRepository {
     fun getCaptain(starshipName: String): String

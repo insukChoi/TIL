@@ -1,9 +1,8 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
-import creationalPatterns.JsonParser
-import creationalPatterns.Server
-import creationalPatterns.ServerConfiguration
-import creationalPatterns.YamlParser
+import `1_creationalPatterns`.JsonParser
+import `1_creationalPatterns`.Server
+import `1_creationalPatterns`.YamlParser
 import kotlin.io.path.Path
 
 /**

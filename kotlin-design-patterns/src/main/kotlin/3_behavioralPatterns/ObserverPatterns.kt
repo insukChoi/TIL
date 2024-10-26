@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 관찰자 패턴

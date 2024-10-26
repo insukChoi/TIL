@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 전략 패턴의 목표는 객체의 동작을 런타임에 변경하는 것이다.

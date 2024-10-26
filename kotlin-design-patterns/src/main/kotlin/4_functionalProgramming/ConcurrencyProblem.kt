@@ -1,4 +1,4 @@
-package functionalProgramming
+package `4_functionalProgramming`
 
 import kotlin.concurrent.thread
 

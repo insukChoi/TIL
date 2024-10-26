@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 명령 디자인 패턴을 사용하면 객체 내부에 동작을 캡슐화해서 넣어 둔 뒤 나중에 실행되도록 할 수 잇다.

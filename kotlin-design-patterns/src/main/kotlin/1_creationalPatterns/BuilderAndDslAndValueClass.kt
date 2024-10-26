@@ -1,4 +1,4 @@
-package creationalPatterns
+package `1_creationalPatterns`
 
 class Mail @PublishedApi internal constructor() {
     companion object {

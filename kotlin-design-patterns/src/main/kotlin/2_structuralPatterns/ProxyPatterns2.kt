@@ -1,4 +1,4 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty

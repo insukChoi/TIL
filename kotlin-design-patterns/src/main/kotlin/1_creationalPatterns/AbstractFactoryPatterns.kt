@@ -1,4 +1,4 @@
-package creationalPatterns
+package `1_creationalPatterns`
 
 /**
  * 추상 팩토리란 팩토리를 만들어 내는 팩토리.

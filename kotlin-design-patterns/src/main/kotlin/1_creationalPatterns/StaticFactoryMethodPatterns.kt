@@ -1,4 +1,4 @@
-package creationalPatterns
+package `1_creationalPatterns`
 
 /**
  * 정적 팩토리 메서드

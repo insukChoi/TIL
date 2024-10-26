@@ -1,4 +1,4 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
 class Squad(val units: List<Trooper>) : Trooper {
     constructor(vararg units: Trooper) : this(units.toList())

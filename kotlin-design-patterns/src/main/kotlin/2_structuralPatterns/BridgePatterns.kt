@@ -1,4 +1,4 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
 /**
  * 브리지 디자인 패턴의 핵심 아이디어는 클래스 계층 구조를 얕게 만듦으로써 시스템에서 구체 클래스의 수를 줄이는 것이다.

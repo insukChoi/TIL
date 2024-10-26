@@ -1,4 +1,4 @@
-package structuralPatterns
+package `2_structuralPatterns`
 
 import java.net.URL
 

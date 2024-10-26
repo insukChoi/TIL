@@ -1,4 +1,4 @@
-package behavioralPatterns
+package `3_behavioralPatterns`
 
 /**
  * 해석기 패턴은 특정한 언어를 번역할 때 사용하는 디자인 패턴이다.

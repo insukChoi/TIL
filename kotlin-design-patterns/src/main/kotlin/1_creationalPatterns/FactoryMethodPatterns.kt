@@ -1,4 +1,4 @@
-package creationalPatterns
+package `1_creationalPatterns`
 
 fun main() {
     val notations = listOf("pa8", "qc3")

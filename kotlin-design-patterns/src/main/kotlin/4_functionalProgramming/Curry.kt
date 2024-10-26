@@ -1,4 +1,4 @@
-package functionalProgramming
+package `4_functionalProgramming`
 
 /**
  * 커리(Curry)는 인수 여러 개를 받는 함수를 단일 인수를 받는 함수의 연쇄 호출로 변환하는 것을 말한다.

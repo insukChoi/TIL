@@ -1,4 +1,4 @@
-package creationalPatterns
+package `1_creationalPatterns`
 
 /**
  * 싱글톤 패턴
