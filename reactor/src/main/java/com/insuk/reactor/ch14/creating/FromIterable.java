@@ -1,4 +1,4 @@
-package com.insuk.reactor.ch14;
+package com.insuk.reactor.ch14.creating;
 
 import com.insuk.reactor.sample.SampleData;
 import org.slf4j.Logger;
@@ -22,15 +22,15 @@ public class FromIterable {
     }
 }
 /*
-15:08:02.879 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: BTC, 현재가: 52000000
-15:08:02.881 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: ETH, 현재가: 1720000
-15:08:02.881 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: XRP, 현재가: 533
-15:08:02.882 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: ICX, 현재가: 2080
-15:08:02.882 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: EOS, 현재가: 4020
-15:08:02.882 [main] INFO com.insuk.reactor.ch14.FromIterable -- coin 명: BCH, 현재가: 558000
+15:08:02.879 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: BTC, 현재가: 52000000
+15:08:02.881 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: ETH, 현재가: 1720000
+15:08:02.881 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: XRP, 현재가: 533
+15:08:02.882 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: ICX, 현재가: 2080
+15:08:02.882 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: EOS, 현재가: 4020
+15:08:02.882 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- coin 명: BCH, 현재가: 558000
  */
 
 /*
-15:12:47.056 [main] INFO com.insuk.reactor.ch14.FromIterable -- BTC
-15:12:47.056 [main] INFO com.insuk.reactor.ch14.FromIterable -- ETH
+15:12:47.056 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- BTC
+15:12:47.056 [main] INFO com.insuk.reactor.ch14.creating.FromIterable -- ETH
  */

@@ -1,4 +1,4 @@
-package com.insuk.reactor.ch14;
+package com.insuk.reactor.ch14.creating;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,11 +30,11 @@ public class Differ {
     }
 }
 /*
-16:15:27.153 [main] INFO com.insuk.reactor.ch14.Differ -- # start: 2025-01-30T16:15:27.153358
-16:15:29.188 [main] INFO com.insuk.reactor.ch14.Differ -- # onNext just1: 2025-01-30T16:15:27.155671
-16:15:29.189 [main] INFO com.insuk.reactor.ch14.Differ -- # onNext defer1: 2025-01-30T16:15:29.189053
-16:15:31.196 [main] INFO com.insuk.reactor.ch14.Differ -- # onNext just2: 2025-01-30T16:15:27.155671
-16:15:31.198 [main] INFO com.insuk.reactor.ch14.Differ -- # onNext defer2: 2025-01-30T16:15:31.198176
+16:15:27.153 [main] INFO com.insuk.reactor.ch14.creating.Differ -- # start: 2025-01-30T16:15:27.153358
+16:15:29.188 [main] INFO com.insuk.reactor.ch14.creating.Differ -- # onNext just1: 2025-01-30T16:15:27.155671
+16:15:29.189 [main] INFO com.insuk.reactor.ch14.creating.Differ -- # onNext defer1: 2025-01-30T16:15:29.189053
+16:15:31.196 [main] INFO com.insuk.reactor.ch14.creating.Differ -- # onNext just2: 2025-01-30T16:15:27.155671
+16:15:31.198 [main] INFO com.insuk.reactor.ch14.creating.Differ -- # onNext defer2: 2025-01-30T16:15:31.198176
  */
 /**
  * just() Operator는 사실 Hot Publisher 이기 때문에 Subscriber의 구독 여부와는 상관없이 데이터를 emit 하게 됩니다.
